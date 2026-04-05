@@ -74,6 +74,22 @@
     }
   </style>
 </head>
+<script>
+  function searchGame() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".game-card");
+
+    cards.forEach(card => {
+      let title = card.querySelector("h2").innerText.toLowerCase();
+
+      if (title.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
 
 <body>
 
@@ -136,7 +152,45 @@
         <a href="https://valorant.vnggames.com/" class="btn">Chơi ngay</a>
       </div>
     </div>
+    <div class="game-card">
+      <img src="https://s3-api.fpt.vn/fptvn-storage/2025-01-02/1735810188_1.png">
+      <div class="game-info">
+        <h2>Liên minh huyền thoại</h2>
+        <div class="rating">⭐ 9.8 / 10</div>
+        <p>
+          Liên Minh Huyền Thoại (League of Legends - LoL) là một trò chơi trực tuyến thuộc thể loại đấu trường trận
+          chiến (MOBA), nơi hai đội (mỗi đội 5 người) đối đầu để phá hủy căn cứ của đối phương.
 
+        </p>
+        <a href="https://www.leagueoflegends.com/vi-vn/" class="btn">Chơi ngay</a>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/vi/4/48/%E1%BA%A2nh_b%C3%ACa_Minecraft.png">
+      <div class="game-info">
+        <h2>minecraft</h2>
+        <div class="rating">⭐ 10 / 10</div>
+        <p>
+          Minecraft là một trò chơi điện tử "sandbox" (thế giới mở) được phát triển bởi Mojang Studios, nơi người chơi
+          khám phá một thế giới 3D vô tận được tạo ra từ các khối lập phương (voxels).
+        </p>
+        <a href="https://www.minecraft.net/en-us/download" class="btn">Chơi ngay</a>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYEzNJRxaDHm3UIHelDWL8pF3fY_zoiX2_Ug&s">
+      <div class="game-info">
+        <h2>GTA 5</h2>
+        <div class="rating">⭐ 8.0 / 10</div>
+        <p>
+          GTA 5 là game thế giới mở hành động xoay quanh phi vụ tội phạm.Điểm nhấn của game là chế độ GTA Online cực kỳ
+          sôi động, cho phép người chơi tự do xây dựng đế chế riêng và làm nhiệm vụ cùng bạn bè.
+
+        </p>
+        <a href="https://gta5grand.com/en?ref=1022&gad_source=1&gad_campaignid=17357859352&gbraid=0AAAAABeVh8kszGC1u3IkAlnK522uK8Jl-&gclid=EAIaIQobChMIlerUx-3RkwMVe6RmAh02GB_4EAAYASAAEgLMTvD_BwE"
+          class="btn">Chơi ngay</a>
+      </div>
+    </div>
   </div>
 
 </body>
